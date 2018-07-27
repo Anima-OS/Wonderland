@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 /*
 wingo is an X window manager written in pure Go that supports floating and
 tiling window placement policies. It is mostly EWMH and ICCCM compliant. Its

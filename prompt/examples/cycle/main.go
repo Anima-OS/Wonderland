@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 // Example cycle shows how to use the cycle prompt. It is by no means
 // comprehensive and should not be considered functional. Namely, it polls
 // for state once and never updates itself. The example is intended to

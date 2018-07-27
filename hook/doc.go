@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 /*
 package hook defines, reads and executes hooks in Wingo. This package must
 be initialized with a Gribble execution environment, and a file path to a

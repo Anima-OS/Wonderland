@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 /*
 wingo-cmd uses Wingo's IPC mechanism to send commands and output the response
 to stdout. wingo-cmd can also be used to view documentation on all available

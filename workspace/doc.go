@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 /*
 Package workspace is responsible for maintaining the state for the workspaces
 used in Wingo. It's responsible for showing or hiding a workspace, activating a

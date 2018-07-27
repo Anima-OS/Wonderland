@@ -1,3 +1,8 @@
+// Copyright (c) 2018, Mark "Happy-Ferret" Bauermeister
+//
+// This software may be modified and distributed under the terms
+// of the BSD license.  See the LICENSE file for details.
+
 // Example select shows how to use a Select prompt from the prompt pacakge.
 // Note that this example is rather messy and lacks documentation at the
 // moment.
