@@ -8,8 +8,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/BurntSushi/wingo/commands"
-	"github.com/BurntSushi/wingo/wm"
+	"github.com/Anima-OS/Wonderland/commands"
+	"github.com/Anima-OS/Wonderland/wm"
 )
 
 func newHacks() wm.CommandHacks {

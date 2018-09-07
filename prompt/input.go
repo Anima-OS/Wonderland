@@ -20,9 +20,9 @@ import (
 	"github.com/BurntSushi/xgbutil/xrect"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/misc"
-	"github.com/BurntSushi/wingo/render"
-	"github.com/BurntSushi/wingo/text"
+	"github.com/Anima-OS/Wonderland/misc"
+	"github.com/Anima-OS/Wonderland/render"
+	"github.com/Anima-OS/Wonderland/text"
 )
 
 type Input struct {

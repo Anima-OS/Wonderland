@@ -11,9 +11,9 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xrect"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/misc"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/misc"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 // ActivateWorkspace will "focus" or "activate" the workspace provided.

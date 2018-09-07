@@ -8,12 +8,12 @@ package xclient
 import (
 	"github.com/BurntSushi/xgbutil/ewmh"
 
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/focus"
-	"github.com/BurntSushi/wingo/frame"
-	"github.com/BurntSushi/wingo/hook"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/event"
+	"github.com/Anima-OS/Wonderland/focus"
+	"github.com/Anima-OS/Wonderland/frame"
+	"github.com/Anima-OS/Wonderland/hook"
+	"github.com/Anima-OS/Wonderland/wm"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 func (c *Client) Focus() {

@@ -8,9 +8,9 @@ say your github username is 'plato', then the following sed command in the
 Wingo project root will do the trick:
 
   find ./ -name '*.go' -print0 | xargs -0 \
-    sed -i 's#github.com/BurntSushi/wingo#github.com/plato/wingo#g'
+    sed -i 's#github.com/Anima-OS/Wonderland#github.com/plato/wingo#g'
 
-Note here that you will only want to replace github.com/BurntSushi/wingo import 
+Note here that you will only want to replace github.com/Anima-OS/Wonderland import 
 paths and not all github.com/BurntSushi import paths, since the xgb and xgbutil 
 packages are also owned by me. (Unless you plan on forking those too.)
 

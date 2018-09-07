@@ -10,8 +10,8 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/text"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/text"
 )
 
 type SelectChoice interface {

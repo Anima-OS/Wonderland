@@ -10,9 +10,9 @@ import (
 
 	"github.com/BurntSushi/xgbutil/ewmh"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/misc"
-	"github.com/BurntSushi/wingo/wini"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/misc"
+	"github.com/Anima-OS/Wonderland/wini"
 )
 
 type Configuration struct {

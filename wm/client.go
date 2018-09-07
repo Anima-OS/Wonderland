@@ -8,10 +8,10 @@ package wm
 import (
 	"github.com/BurntSushi/xgb/xproto"
 
-	"github.com/BurntSushi/wingo/frame"
-	"github.com/BurntSushi/wingo/heads"
-	"github.com/BurntSushi/wingo/prompt"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/frame"
+	"github.com/Anima-OS/Wonderland/heads"
+	"github.com/Anima-OS/Wonderland/prompt"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 type Client interface {

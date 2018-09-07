@@ -56,7 +56,7 @@
 #     wingo-cmd --usage WorkspaceGreedy
 #
 # If you don't have `wingo-cmd` available on your system, and you installed
-# Wingo with `go get`, then `go get github.com/BurntSushi/wingo/wingo-cmd`
+# Wingo with `go get`, then `go get github.com/Anima-OS/Wonderland/wingo-cmd`
 # should install wingo-cmd for you. If you *didn't* install Wingo with `go
 # get`, then presumably you need to speak to the package maintainer in charge
 # of the package.

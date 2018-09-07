@@ -15,9 +15,9 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xgraphics"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/render"
-	"github.com/BurntSushi/wingo/wini"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/render"
+	"github.com/Anima-OS/Wonderland/wini"
 )
 
 func setString(k wini.Key, place *string) {

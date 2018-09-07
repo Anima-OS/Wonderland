@@ -18,11 +18,11 @@ import (
 	"github.com/BurntSushi/xgbutil/xevent"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/focus"
-	"github.com/BurntSushi/wingo/heads"
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/event"
+	"github.com/Anima-OS/Wonderland/focus"
+	"github.com/Anima-OS/Wonderland/heads"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 var (

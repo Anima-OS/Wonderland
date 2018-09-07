@@ -5,7 +5,7 @@ post_install() {
   echo
   echo "You should now create a fresh configuration with 'wingo --write-config'"
   echo
-  echo "For more help, file an issue at https://github.com/BurntSushi/wingo"
+  echo "For more help, file an issue at https://github.com/Anima-OS/Wonderland"
 }
 
 post_upgrade() {

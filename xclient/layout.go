@@ -10,9 +10,9 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xrect"
 
-	"github.com/BurntSushi/wingo/layout"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/layout"
+	"github.com/Anima-OS/Wonderland/wm"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 func (c *Client) CheckNewWorkspace() {

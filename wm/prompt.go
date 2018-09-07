@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/BurntSushi/wingo/focus"
-	"github.com/BurntSushi/wingo/prompt"
+	"github.com/Anima-OS/Wonderland/focus"
+	"github.com/Anima-OS/Wonderland/prompt"
 )
 
 type AllPrompts struct {

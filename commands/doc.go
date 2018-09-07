@@ -10,6 +10,6 @@ For more about Gribble, see
 http://godoc.burntsushi.net/pkg/github.com/BurntSushi/gribble/
 
 For about using Gribble with Wingo, see
-https://github.com/BurntSushi/wingo/blob/master/HOWTO-COMMANDS
+https://github.com/Anima-OS/Wonderland/blob/master/HOWTO-COMMANDS
 */
 package commands

@@ -25,7 +25,7 @@ command.
 
 If you don't have it and you used `go get` to install Wingo, then:
 
-    go get github.com/BurntSushi/wingo/wingo-cmd
+    go get github.com/Anima-OS/Wonderland/wingo-cmd
 
 should install it. If you don't have it and didn't use `go get` to install
 Wingo, then you probably installed Wingo via your package manager. In that 
@@ -38,7 +38,7 @@ command.
 
 In the worst case, you can use the Go package docs, but it's a bit harder
 to read:
-http://godoc.burntsushi.net/pkg/github.com/BurntSushi/wingo/commands/
+http://godoc.burntsushi.net/pkg/github.com/Anima-OS/Wonderland/commands/
 
 
 How to run commands

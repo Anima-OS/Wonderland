@@ -19,7 +19,7 @@ gofmt:
 	colcheck -c 80 *.go */*.go
 
 cmd:
-	go install github.com/BurntSushi/wingo/wingo-cmd
+	go install github.com/Anima-OS/Wonderland/wingo-cmd
 
 supported:
 	scripts/generate-supported | gofmt > ewmh_supported.go

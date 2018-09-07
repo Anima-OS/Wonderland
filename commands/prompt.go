@@ -10,10 +10,10 @@ import (
 
 	"github.com/BurntSushi/gribble"
 
-	"github.com/BurntSushi/wingo/prompt"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/workspace"
-	"github.com/BurntSushi/wingo/xclient"
+	"github.com/Anima-OS/Wonderland/prompt"
+	"github.com/Anima-OS/Wonderland/wm"
+	"github.com/Anima-OS/Wonderland/workspace"
+	"github.com/Anima-OS/Wonderland/xclient"
 )
 
 type CycleClientChoose struct{

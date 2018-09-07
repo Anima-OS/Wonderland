@@ -10,7 +10,7 @@ import (
 	"github.com/BurntSushi/xgbutil/keybind"
 	"github.com/BurntSushi/xgbutil/xevent"
 
-	"github.com/BurntSushi/wingo/logger"
+	"github.com/Anima-OS/Wonderland/logger"
 )
 
 type keyCommand struct {

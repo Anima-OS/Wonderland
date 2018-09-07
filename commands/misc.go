@@ -15,11 +15,11 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xrect"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/prompt"
-	"github.com/BurntSushi/wingo/workspace"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/xclient"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/prompt"
+	"github.com/Anima-OS/Wonderland/workspace"
+	"github.com/Anima-OS/Wonderland/wm"
+	"github.com/Anima-OS/Wonderland/xclient"
 )
 
 // parsePos takes a string and parses an x or y position from it.

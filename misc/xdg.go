@@ -12,25 +12,25 @@ import (
 
 	"github.com/BurntSushi/xdg"
 
-	"github.com/BurntSushi/wingo/logger"
+	"github.com/Anima-OS/Wonderland/logger"
 )
 
 var ConfigPaths = xdg.Paths{
 	Override:     "",
-	XDGSuffix:    "wingo",
-	GoImportPath: "github.com/BurntSushi/wingo/config",
+	XDGSuffix:    "Wonderland",
+	GoImportPath: "github.com/Anima-OS/Wonderland/config",
 }
 
 var DataPaths = xdg.Paths{
 	Override:     "",
-	XDGSuffix:    "wingo",
-	GoImportPath: "github.com/BurntSushi/wingo/data",
+	XDGSuffix:    "Wonderland",
+	GoImportPath: "github.com/Anima-OS/Wonderland/data",
 }
 
 var ScriptPaths = xdg.Paths{
 	Override:     "",
-	XDGSuffix:    "wingo",
-	GoImportPath: "github.com/BurntSushi/wingo/config",
+	XDGSuffix:    "Wonderland",
+	GoImportPath: "github.com/Anima-OS/Wonderland/config",
 }
 
 func ConfigFile(name string) string {

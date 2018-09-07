@@ -13,8 +13,8 @@ import (
 	"github.com/BurntSushi/xgbutil/ewmh"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/workspace"
+	"github.com/Anima-OS/Wonderland/event"
+	"github.com/Anima-OS/Wonderland/workspace"
 )
 
 func ewmhClientList() {

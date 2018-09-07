@@ -9,7 +9,7 @@ mostly ICCCM and EWMH compliant (see COMPLIANCE).
 If you have Go installed and configured on your machine, all you need to do is:
 (For Archlinux users, Wingo is in the AUR.)
 
-    go get github.com/BurntSushi/wingo
+    go get github.com/Anima-OS/Wonderland
 
 And in your $HOME/.xinitrc:
 
@@ -30,7 +30,7 @@ You can find me in the #wingo IRC channel on FreeNode.
 My triple head setup
 ====================
 
-[![Triple head with Wingo](https://github.com/BurntSushi/wingo/wiki/screenshots/thumbs/triple-head.png)](https://github.com/BurntSushi/wingo/wiki/screenshots/triple-head.png)
+[![Triple head with Wingo](https://github.com/Anima-OS/Wonderland/wiki/screenshots/thumbs/triple-head.png)](https://github.com/Anima-OS/Wonderland/wiki/screenshots/triple-head.png)
 
 
 Dude... why?
@@ -101,7 +101,7 @@ Scripting Wingo
 So I lied earlier. You can kind of script Wingo by using its IPC mechanism.
 You'll need to make sure that wingo-cmd is installed:
 
-    go get github.com/BurntSushi/wingo/wingo-cmd
+    go get github.com/Anima-OS/Wonderland/wingo-cmd
 
 While Wingo is running, you can send any command you like:
 

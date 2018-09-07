@@ -20,9 +20,9 @@ import (
 	"github.com/BurntSushi/xgbutil/xrect"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/misc"
-	"github.com/BurntSushi/wingo/render"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/misc"
+	"github.com/Anima-OS/Wonderland/render"
 )
 
 // Cycle represents a single cycle prompt. A new cycle prompt can be created by:

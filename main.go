@@ -28,17 +28,17 @@ import (
 	"github.com/BurntSushi/xgbutil/mousebind"
 	"github.com/BurntSushi/xgbutil/xevent"
 
-	"github.com/BurntSushi/wingo/commands"
-	"github.com/BurntSushi/wingo/cursors"
-	"github.com/BurntSushi/wingo/event"
-	"github.com/BurntSushi/wingo/focus"
-	"github.com/BurntSushi/wingo/frame"
-	"github.com/BurntSushi/wingo/hook"
-	"github.com/BurntSushi/wingo/logger"
-	"github.com/BurntSushi/wingo/misc"
-	"github.com/BurntSushi/wingo/stack"
-	"github.com/BurntSushi/wingo/wm"
-	"github.com/BurntSushi/wingo/xclient"
+	"github.com/Anima-OS/Wonderland/commands"
+	"github.com/Anima-OS/Wonderland/cursors"
+	"github.com/Anima-OS/Wonderland/event"
+	"github.com/Anima-OS/Wonderland/focus"
+	"github.com/Anima-OS/Wonderland/frame"
+	"github.com/Anima-OS/Wonderland/hook"
+	"github.com/Anima-OS/Wonderland/logger"
+	"github.com/Anima-OS/Wonderland/misc"
+	"github.com/Anima-OS/Wonderland/stack"
+	"github.com/Anima-OS/Wonderland/wm"
+	"github.com/Anima-OS/Wonderland/xclient"
 )
 
 var (
@@ -50,7 +50,7 @@ var (
 	flagDataDir        = ""
 	flagWriteConfig    = false
 	flagCpuProfile     = ""
-	flagWingoRestarted = false
+	flagWonderlandRestarted = false
 	flagShowSocket     = false
 )
 
@@ -58,37 +58,37 @@ func init() {
 	flag.IntVar(&flagGoMaxProcs, "p", flagGoMaxProcs,
 		"The maximum number of CPUs that can be executing simultaneously.")
 	flag.IntVar(&flagLogLevel, "log-level", flagLogLevel,
-		"The logging level of Wingo. Valid values are 0, 1, 2, 3 or 4.\n"+
-			"Higher numbers result in Wingo producing more output.")
+		"The logging level of Wonderland. Valid values are 0, 1, 2, 3 or 4.\n"+
+			"Higher numbers result in Wonderland producing more output.")
 	flag.BoolVar(&flagLogColors, "log-colors", flagLogColors,
 		"Whether to output logging data with terminal colors.")
 	flag.BoolVar(&flagReplace, "replace", flagReplace,
-		"When set, Wingo will attempt to replace a currently running\n"+
+		"When set, Wonderland will attempt to replace a currently running\n"+
 			"window manager. If this is not set, and another window manager\n"+
-			"is running, Wingo will exit.")
+			"is running, Wonderland will exit.")
 	flag.StringVar(&flagConfigDir, "config-dir", flagConfigDir,
 		"Override the location of the configuration files. When this\n"+
 			"is not set, the following paths (roughly) will be checked\n"+
-			"in order: $XDG_CONFIG_DIR/wingo, /etc/xdg/wingo,\n"+
-			"$GOPATH/src/github.com/BurntSushi/wingo/config")
+			"in order: $XDG_CONFIG_DIR/Wonderland, /etc/xdg/Wonderland,\n"+
+			"$GOPATH/src/github.com/Anima-OS/Wonderland/config")
 	flag.StringVar(&flagDataDir, "data-dir", flagDataDir,
 		"Override the location of the data files (images/fonts). When this\n"+
 			"is not set, the following paths (roughly) will be checked\n"+
-			"in order: $XDG_DATA_HOME/wingo, /usr/local/share, /usr/share,\n"+
-			"$GOPATH/src/github.com/BurntSushi/wingo/data")
+			"in order: $XDG_DATA_HOME/Wonderland, /usr/local/share, /usr/share,\n"+
+			"$GOPATH/src/github.com/Anima-OS/Wonderland/data")
 	flag.BoolVar(&flagWriteConfig, "write-config", flagWriteConfig,
-		"Writes a fresh set of configuration files to $XDG_CONFIG_HOME/wingo\n"+
+		"Writes a fresh set of configuration files to $XDG_CONFIG_HOME/Wonderland\n"+
 			"if XDG_CONFIG_HOME is set. Otherwise, configuration files\n"+
-			"are written to $HOME/.config/wingo.\n"+
-			"This will fail if the 'wingo' configuration directory already\n"+
+			"are written to $HOME/.config/Wonderland.\n"+
+			"This will fail if the 'Wonderland' configuration directory already\n"+
 			"exists, to prevent accidentally overwriting an existing\n"+
 			"configuration.\n\n"+
-			"When this flag is set, Wingo will not start.")
-	flag.BoolVar(&flagWingoRestarted, "wingo-restarted", flagWingoRestarted,
-		"DO NOT USE. INTERNAL WINGO USE ONLY.")
+			"When this flag is set, Wonderland will not start.")
+	flag.BoolVar(&flagWonderlandRestarted, "Wonderland-restarted", flagWonderlandRestarted,
+		"DO NOT USE. INTERNAL Wonderland USE ONLY.")
 
 	flag.BoolVar(&flagShowSocket, "show-socket", flagShowSocket,
-		"When set, the command will detect if Wingo is already running,\n"+
+		"When set, the command will detect if Wonderland is already running,\n"+
 			"and if so, outputs the file path to the current socket.")
 
 	flag.StringVar(&flagCpuProfile, "cpuprofile", flagCpuProfile,
@@ -189,7 +189,7 @@ func main() {
 		defer pprof.StopCPUProfile()
 	}
 
-	if flagWingoRestarted {
+	if flagWonderlandRestarted {
 		hook.Fire(hook.Restarted, hook.Args{})
 	} else {
 		hook.Fire(hook.Startup, hook.Args{})
@@ -218,18 +218,18 @@ EVENTLOOP:
 		}
 		time.Sleep(1 * time.Second)
 
-		// We need to tell the next invocation of Wingo that it is being
+		// We need to tell the next invocation of Wonderland that it is being
 		// *restarted*. (So that we don't refire the startup hook.)
-		// Thus, search os.Args for "--wingo-restarted". If it doesn't exist,
+		// Thus, search os.Args for "--Wonderland-restarted". If it doesn't exist,
 		// add it.
 		found := false
 		for _, arg := range os.Args {
-			if strings.ToLower(strings.TrimSpace(arg)) == "--wingo-restarted" {
+			if strings.ToLower(strings.TrimSpace(arg)) == "--Wonderland-restarted" {
 				found = true
 			}
 		}
 		if !found {
-			os.Args = append(os.Args, "--wingo-restarted")
+			os.Args = append(os.Args, "--Wonderland-restarted")
 		}
 		logger.Message.Println("The user has told us to restart...\n\n\n")
 		execPath, err := os.Executable()
@@ -261,7 +261,7 @@ func setSupported() {
 	// While we're at it, set the supporting wm hint too.
 	ewmh.SupportingWmCheckSet(wm.X, wm.X.RootWin(), wm.X.Dummy())
 	ewmh.SupportingWmCheckSet(wm.X, wm.X.Dummy(), wm.X.Dummy())
-	ewmh.WmNameSet(wm.X, wm.X.Dummy(), "Wingo")
+	ewmh.WmNameSet(wm.X, wm.X.Dummy(), "Wonderland")
 }
 
 // manageExistingClients traverse the window tree and tries to manage all
@@ -295,7 +295,7 @@ func usage() {
 	fmt.Fprintf(os.Stderr, "\nUsage: %s [flags]\n", path.Base(os.Args[0]))
 	flag.VisitAll(func(fg *flag.Flag) {
 		// Don't let users know about flags they shouldn't use.
-		if fg.Name == "wingo-restarted" {
+		if fg.Name == "Wonderland-restarted" {
 			return
 		}
 		fmt.Printf("--%s=\"%s\"\n\t%s\n", fg.Name, fg.DefValue,
@@ -310,8 +310,8 @@ func showSocketPath(X *xgbutil.XUtil) {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	if strings.ToLower(currentWM) != "wingo" {
-		fmt.Fprintf(os.Stderr, "Could not detect a Wingo instance. "+
+	if strings.ToLower(currentWM) != "Wonderland" {
+		fmt.Fprintf(os.Stderr, "Could not detect a Wonderland instance. "+
 			"(Found '%s' instead.)\n", currentWM)
 		os.Exit(1)
 	}

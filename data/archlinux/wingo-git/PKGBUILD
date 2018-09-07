@@ -5,7 +5,7 @@ pkgver=20121022
 pkgrel=2
 pkgdesc="An X window manager featuring per-monitor workspaces with floating and tiling placement policies."
 arch=('any')
-url="https://github.com/BurntSushi/wingo"
+url="https://github.com/Anima-OS/Wonderland"
 license=('WTFPL')
 groups=()
 makedepends=('go' 'git' 'mercurial')
@@ -18,10 +18,10 @@ build() {
   cd "$srcdir"
 
   msg "go getting wingo... (this may take a while)"
-  GOPATH="$srcdir" go get -u -f -v -x github.com/BurntSushi/wingo
+  GOPATH="$srcdir" go get -u -f -v -x github.com/Anima-OS/Wonderland
 
   msg "go getting wingo-cmd..."
-  GOPATH="$srcdir" go get -u -f -v -x github.com/BurntSushi/wingo/wingo-cmd
+  GOPATH="$srcdir" go get -u -f -v -x github.com/Anima-OS/Wonderland/wingo-cmd
 }
 
 package() {
@@ -32,7 +32,7 @@ package() {
   install -Dm755 bin/wingo-cmd "$pkgdir/usr/bin/wingo-cmd"
 
   # Install Wingo documentation.
-  cd "$srcdir/src/github.com/BurntSushi/wingo"
+  cd "$srcdir/src/github.com/Anima-OS/Wonderland"
   install -Dm644 COMPLIANCE "$pkgdir/usr/share/doc/wingo/COMPLIANCE"
   install -Dm644 COPYING "$pkgdir/usr/share/doc/wingo/COPYING"
   install -Dm644 HOWTO-COMMANDS "$pkgdir/usr/share/doc/wingo/HOWTO-COMMANDS"
@@ -42,7 +42,7 @@ package() {
   install -Dm644 STYLE "$pkgdir/usr/share/doc/wingo/STYLE"
 
   # Install Wingo configuration to /etc/xdg/wingo
-  cd "$srcdir/src/github.com/BurntSushi/wingo/config"
+  cd "$srcdir/src/github.com/Anima-OS/Wonderland/config"
   install -Dm644 hooks.wini "$pkgdir/etc/xdg/wingo/hooks.wini"
   install -Dm644 key.wini "$pkgdir/etc/xdg/wingo/key.wini"
   install -Dm644 mouse.wini "$pkgdir/etc/xdg/wingo/mouse.wini"
@@ -50,7 +50,7 @@ package() {
   install -Dm644 theme.wini "$pkgdir/etc/xdg/wingo/theme.wini"
 
   # Install Wingo data files to /usr/share/wingo
-  cd "$srcdir/src/github.com/BurntSushi/wingo/data"
+  cd "$srcdir/src/github.com/Anima-OS/Wonderland/data"
   install -Dm644 DejaVuSans.ttf "$pkgdir/usr/share/wingo/DejaVuSans.ttf"
   install -Dm644 wingo.wav "$pkgdir/usr/share/wingo/wingo.wav"
   install -Dm644 wingo.png "$pkgdir/usr/share/wingo/wingo.png"
@@ -59,6 +59,6 @@ package() {
   install -Dm644 maximize.png "$pkgdir/usr/share/wingo/maximize.png"
 
   # Install Wingo xsession file to /usr/share/xsessions
-  cd "$srcdir/src/github.com/BurntSushi/wingo/data/archlinux/wingo-git"
+  cd "$srcdir/src/github.com/Anima-OS/Wonderland/data/archlinux/wingo-git"
   install -Dm644 wingo.desktop "$pkgdir/usr/share/xsessions/wingo.desktop"
 }

@@ -15,12 +15,12 @@ import (
 
 	"github.com/BurntSushi/xgbutil"
 
-	"github.com/BurntSushi/wingo/commands"
-	"github.com/BurntSushi/wingo/logger"
+	"github.com/Anima-OS/Wonderland/commands"
+	"github.com/Anima-OS/Wonderland/logger"
 )
 
 // ipc starts the command server via a unix domain socket. It accepts
-// connections, reads Wingo commands, and attempts to execute them. If the
+// connections, reads Wonderland commands, and attempts to execute them. If the
 // command results in an error, it is sent back to the client. Otherwise, the
 // return value of the command is sent to the user.
 //
@@ -58,9 +58,9 @@ func socketFilePath(X *xgbutil.XUtil) string {
 	var runtimeDir string
 	xdgRuntime := os.Getenv("XDG_RUNTIME_DIR")
 	if len(xdgRuntime) > 0 {
-		runtimeDir = path.Join(xdgRuntime, "wingo")
+		runtimeDir = path.Join(xdgRuntime, "Wonderland")
 	} else {
-		runtimeDir = path.Join(os.TempDir(), "wingo")
+		runtimeDir = path.Join(os.TempDir(), "Wonderland")
 	}
 
 	if err := os.MkdirAll(runtimeDir, 0777); err != nil {
@@ -90,7 +90,7 @@ func handleClient(conn net.Conn) {
 		// Run the command. We set the error reporting to verbose. Be kind!
 		// If the command resulted in an error, we stop and send the error back
 		// to the user. (This would be a Gribble parse/type error, not a
-		// Wingo error.)
+		// Wonderland error.)
 		commands.Env.Verbose = true
 		val, err := commands.Env.RunMany(msg)
 		commands.Env.Verbose = false

@@ -14,7 +14,7 @@ import (
 	"github.com/BurntSushi/xgbutil/xevent"
 	"github.com/BurntSushi/xgbutil/xwindow"
 
-	"github.com/BurntSushi/wingo/prompt"
+	"github.com/Anima-OS/Wonderland/prompt"
 )
 
 // response is the callback that gets executed whenever the user hits

@@ -5,8 +5,8 @@ Quick Install Instructions
 Since Wingo is a pure Go program, the best way to install Wingo is with the Go 
 tool. If you have a Go environment already set up, this is as easy as:
 
-    go get github.com/BurntSushi/wingo
-    go get github.com/BurntSushi/wingo/wingo-cmd # optional
+    go get github.com/Anima-OS/Wonderland
+    go get github.com/Anima-OS/Wonderland/wingo-cmd # optional
 
 The first command installs the Wingo window manager and the second installs the 
 command that can be used to interact with Wingo from the command line.

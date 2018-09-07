@@ -10,7 +10,7 @@ import (
 
 	"github.com/BurntSushi/xgbutil/xrect"
 
-	"github.com/BurntSushi/wingo/layout"
+	"github.com/Anima-OS/Wonderland/layout"
 )
 
 type Client interface {

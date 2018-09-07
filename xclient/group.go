@@ -8,7 +8,7 @@ package xclient
 import (
 	"github.com/BurntSushi/xgbutil/icccm"
 
-	"github.com/BurntSushi/wingo/stack"
+	"github.com/Anima-OS/Wonderland/stack"
 )
 
 // Transient is a wrapper around transient that type switches an empty interface
