@@ -12,6 +12,7 @@ var (
 	ClosePng      []byte
 	MinimizePng   []byte
 	MaximizePng   []byte
+	Wallpaper     []byte
 )
 
 func ReadData() {
@@ -21,4 +22,5 @@ func ReadData() {
 	ClosePng = DataFile("close.png")
 	MinimizePng = DataFile("minimize.png")
 	MaximizePng = DataFile("maximize.png")
+	Wallpaper = DataFile("wallpaper.png")
 }
