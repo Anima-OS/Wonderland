@@ -30,6 +30,7 @@ import (
 
 	"github.com/Anima-OS/Wonderland/commands"
 	"github.com/Anima-OS/Wonderland/cursors"
+	"github.com/Anima-OS/Wonderland/desktop"
 	"github.com/Anima-OS/Wonderland/event"
 	"github.com/Anima-OS/Wonderland/focus"
 	"github.com/Anima-OS/Wonderland/frame"
@@ -42,16 +43,16 @@ import (
 )
 
 var (
-	flagGoMaxProcs     = runtime.NumCPU()
-	flagLogLevel       = 2
-	flagLogColors      = false
-	flagReplace        = false
-	flagConfigDir      = ""
-	flagDataDir        = ""
-	flagWriteConfig    = false
-	flagCpuProfile     = ""
+	flagGoMaxProcs          = runtime.NumCPU()
+	flagLogLevel            = 2
+	flagLogColors           = false
+	flagReplace             = false
+	flagConfigDir           = ""
+	flagDataDir             = ""
+	flagWriteConfig         = false
+	flagCpuProfile          = ""
 	flagWonderlandRestarted = false
-	flagShowSocket     = false
+	flagShowSocket          = false
 )
 
 func init() {
@@ -149,6 +150,7 @@ func main() {
 	cursors.Initialize(X)
 	wm.Initialize(X, commands.Env, newHacks())
 	hook.Initialize(commands.Env, misc.ConfigFile("hooks.wini"))
+	desktop.Initialize()
 
 	// Initialize event handlers on the root window.
 	rootInit(X)
